@@ -1,6 +1,7 @@
 <!-- Start Header -->
 <nav class="navbar navbar-default navbar-fixed-top no-print">
     <div class="container-fluid">
+	    {% include search.html %}
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -16,8 +17,7 @@
        
         <div class="collapse navbar-collapse scrollspy" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-		    <li>{% include search.html %}</li>
-		    {% for menu in site.data.menu.items %}
+	   {% for menu in site.data.menu.items %}
                 <li><a class="scroll" href="{{site.baseurl}}{{menu.url}}" title="{{ menu.name }}">{{ menu.name }}</a></li>{% endfor %}
 		<li><a class="scroll header__checkout snipcart-checkout pointer"><svg class="icon icon-bag"><use xlink:href="#icon-bag"></use></svg>&nbsp;<span class="snipcart-total-price"></span></a></li>
             </ul>
