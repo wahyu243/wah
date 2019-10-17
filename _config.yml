@@ -3,7 +3,7 @@ name: Jekyll Ecommerce
 title: Awesome Jekyll Ecommerce 
 description: "Jekyll Ecommerce Awesome Theme  "
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://blog-post.jekylltheme.net" # the name of your domain
+url: "https://eccomerce.jekylltheme.net" # the name of your domain
 logo_url: img/logojt.png # logo
 image: default-img.jpg
 language: en # language
