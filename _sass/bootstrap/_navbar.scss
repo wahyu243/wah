@@ -667,15 +667,3 @@
 }.right {
 float:right
 }
-.scr:hover,scr:focus {
-    width: 200px;
-    position: absolute;
-    right: 0;transition: width 0.4s linear;
-}
-
-.scr {
-    width: 65px;
-    border-radius: 30px;
-    margin-top: 17px;
-    font-size: 12px;transition: width 0.4s linear;
-}
