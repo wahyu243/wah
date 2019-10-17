@@ -17,10 +17,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-      - label: "Price"
-        name: "price"
-        widget: "string"
-        required: false
+      - {label: "Price", name: "price", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
@@ -32,31 +29,26 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "nosidebar"
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
-      - label: "Image"
-        name: "image"
-        widget: "image"
-        required: false
-      - {label: "Date", name: "date", widget: "datetime"}
-      - label: "Author"
-        name: "author"
-        widget: "string"
-        required: false
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Price", name: "price", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-  
-- name: 'pages'
-  label: 'Pages'
-  folder: "_pages/"
-  editor:
+      
+  - name: 'pages'
+    label: 'Pages'
+    folder: "_pages/"
+    editor:
     preview: false
-  files:
-    - label: 'About Page'
-      name: 'about'
-      file: 'about.md'
-      fields:
+    files:
+     - label: 'About Page'
+       name: 'about'
+       file: 'about.md'
+       fields:
         - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
         - { label: 'Layout', name: 'title', widget: 'hidden', default: 'pages' }
         - { label: 'Body', name: 'body', widget: 'markdown' }
