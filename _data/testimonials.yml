@@ -1,15 +1,15 @@
 - name: Emma
+  testimonials_img: t2.jpg
   description: Lorem Ippsum dot amet Lorem Ippsum dot amet Lorem Ippsum dot amet Lorem Ippsum dot amet
   title: Olshop - New York
 
-- name: Anto
+- name: Smith
+  testimonials_img: t1.jpg
   description:  Lorem Ippsum dot amet Lorem Ippsum dot amet Lorem Ippsum dot amet Lorem Ippsum dot amet.
   title: Dev - USA
 
 - name: Randy
+  testimonials_img: t3
   description:  Lorem Ippsum dot amet Lorem Ippsum dot amet Lorem Ippsum dot amet Lorem Ippsum dot amet.
   title: Dev - China
 
-- name: Sasha
-  description:  Lorem Ippsum dot amet Lorem Ippsum dot amet Lorem Ippsum dot amet Lorem Ippsum dot amet.
-  title: Dev - UK
