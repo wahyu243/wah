@@ -82,3 +82,14 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Url, name: url, widget: string}
 
+      - name: 'testimonials'
+        label: 'Testimonials'
+        file: '_data/testimonials.yml'
+        fields:
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Description, name: description, widget: string}
+              - {label: Title, name: title, widget: string}
