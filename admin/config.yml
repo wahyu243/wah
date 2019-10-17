@@ -39,6 +39,8 @@ collections:
       
   - name: 'pages'
     label: 'Pages'
+    folder: "_pages/"
+    create: true
     editor:
       preview: false
     files:
