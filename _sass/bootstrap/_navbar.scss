@@ -166,11 +166,11 @@ display: flex;
 }
 
 .form-control.head_search {
-    font-size: 14px;
-    background: #2d2c2c url(/svg/scr.svg) center right 10px no-repeat;
+    font-size: 12px;
+    background: url(/svg/scr.svg) center right 10px no-repeat;
+    background-size: 12px;
     box-sizing: border-box;
     height: 38px;
     width: 201px;
-    border: 1px solid #2f2f2f;
     border-radius: 2px;
 }
