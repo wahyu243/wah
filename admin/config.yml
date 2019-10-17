@@ -37,18 +37,18 @@ collections:
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
       
-- name: "config"
-  label: "Config"
-  editor:
+  - name: "config"
+    label: "Config"
+    editor:
     preview: false
-  files:
-    - label: "Navigation"
-      name: "navigation"
-      file: "_data/menu.yml"
-      fields:
-        - label: "Navigation Items"
-          name: "items"
-          widget: "list"
-          fields:
-            - {label: Name, name: name, widget: string}
-            - {label: Link, name: link, widget: string}
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "_data/menu.yml"
+        fields:
+          - label: "Navigation Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Url, name: url, widget: string}
