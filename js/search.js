@@ -208,6 +208,6 @@
 SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results'),
-    searchResultTemplate: '<div class="col-xs-12 col-sm-6 col-md-4 mt-4"><div class="card-home"><a href="{url}"><img title="{title }" alt="{post.title}" height="350" width="350" src="/img/product/{image}"></a><div class="card-home-body mt-4">    <h3 class="card-home-title"><a href="{url}">{title}</a><span class="card-price">${price}</span></h3><p class="card-text mt-2">{description}</p></div></div></div>',
+    searchResultTemplate: '<div class="col-xs-12 col-sm-5 col-md-3 mt-4"><div class="card-home"><a href="{url}" title="{title}"><img alt="{title}" height="350" width="350" src="/img/product/{image}"></a><div class="card-home-body mt-4">    <h3 class="card-home-title"><a href="{url}">{title}</a><span class="card-price">${price}</span></h3><p class="card-text mt-2">{description}</p></div></div></div>',
     json: '/search.json'
 });
