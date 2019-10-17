@@ -1,6 +1,6 @@
 --- 
 layout: nosidebar
-title: Food and Drink
+title: Food
 description: lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
 ---
 
