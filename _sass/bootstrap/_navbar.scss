@@ -165,4 +165,12 @@ display: flex;
     border-radius: 20px
 }
 
-
+.form-control.head_search {
+    font-size: 14px;
+    background: #2d2c2c url(/svg/scr.svg) center right 10px no-repeat;
+    box-sizing: border-box;
+    height: 38px;
+    width: 201px;
+    border: 1px solid #2f2f2f;
+    border-radius: 2px;
+}
