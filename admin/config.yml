@@ -22,21 +22,7 @@ collections:
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-      
-  - name: 'pages'
-    label: 'Pages'
-    folder: "_pages/"
-    editor:
-    preview: false
-    files:
-     - label: 'About Page'
-       name: 'about'
-       file: 'about.md'
-       fields:
-        - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
-        - { label: 'Layout', name: 'title', widget: 'hidden', default: 'pages' }
-        - { label: 'Body', name: 'body', widget: 'markdown' } 
-        
+
   - name: "config"
     label: "Config"
     editor:
