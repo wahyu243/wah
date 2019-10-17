@@ -42,11 +42,11 @@ collections:
     editor:
     preview: false
     files:
-      - label: "Navigation"
-        name: "navigation"
+      - label: "Menu"
+        name: "menu"
         file: "_data/menu.yml"
         fields:
-          - label: "Navigation Items"
+          - label: "Menu Items"
             name: "items"
             widget: "list"
             fields:
