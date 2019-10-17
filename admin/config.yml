@@ -41,8 +41,7 @@ collections:
     label: 'Pages'
     folder: "_pages/"
     create: true
-    editor:
-      preview: false
+    slug: "{{slug}}"
     files:
       - label: 'About Page'
         name: 'about'
