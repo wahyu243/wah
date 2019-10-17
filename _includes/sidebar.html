@@ -1,0 +1,26 @@
+<div class="card border-0 shadow mb-4 text-center">
+<div class="card-body">
+<div class="small mb-2 font-weight-bold">Follow and get updates</div>
+<a target="_blank" href="https://twitter.com/intent/user?original_referer=&amp;region=screen_name&amp;screen_name={{site.twitter-name}}&amp;source=followbutton&amp;variant=1.1" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn-twitter btn-sm btn-block"><i class="fab fa-twitter"></i> Follow @{{site.twitter-name}}</a>
+</div>
+</div>
+
+<div class="card border-0 shadow mb-4">
+<div class="card-body">
+<h5 class="mb-0">Need something more?</h5>
+<p class="small mb-4">Try one of these themes!</p>
+<div class="row">
+{% for post in site.posts limit:4 %}
+<div class="col-md-6 mb-4">
+<div class="item-card">
+<a class="item-card-img shadow d-block" href="{{site.url}}{{ post.url }}" title="{{ post.title }}" rel="nofollow">
+<img class="img-fluid" src="/img/product/{{ post.image }}" alt="{{ post.title }}">
+</a>
+</div>
+</div>
+{% endfor %}
+</div>
+<a href="/theme/free" class="btn btn-sm btn-outline-success btn-block">View More Themes</a>
+</div>
+</div>

@@ -1,0 +1,73 @@
+# site setting
+name: Jekyll Ecommerce
+title: Awesome Jekyll Ecommerce 
+description: "Jekyll Ecommerce Awesome Theme  "
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://blog-post.jekylltheme.net" # the name of your domain
+logo_url: img/logojt.png # logo
+image: default-img.jpg
+language: en # language
+
+collections:
+  pages:
+    permalink: "/:title"
+    output: true
+  posts:
+    permalink: "/:categories/:title"
+    output: true
+
+# Default Setting Product and Page
+defaults:
+- scope:
+    path: _pages
+    type: pages
+  values:
+    layout: page
+    image: default-image.jpg
+    author: Author Name
+    avatar: /default-avatar.jpg
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    image: default-image.jpg
+    author: Author Name
+    avatar: /default-avatar.jpg
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+paginate_path: /page/:num/
+paginate: 9
+
+sass:
+  style: compressed
+  
+include: [_redirects,.htaccess,_pages]
+
+# Web Social url settings
+facebook: http://facebook.com/administrasi.net
+twitter: http://twitter.com
+twitter-name: TrackersCoin
+instagram: http://instagram.com
+youtube: http://youtube.com
+
+# Footer
+copyright: © 2019 Jekyll Ecommerce - All rights reserved
+
+# 3dPart
+snipcart-api: ZmFkZTg2YjgtYjI5Mi00MGQ1LThmOGQtMjRlNzFkNzJiMmFlNjM3MDY3MTkyNzYyMTEwNjEw
+
+analytics: 
+google_verification: 
+bing_verification: 
+alexa_verification: 
+
+# comment
+disqus:
+  shortname: ArtiPedia

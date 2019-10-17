@@ -1,0 +1,52 @@
+--- 
+layout: default 
+---
+
+<div class="container jumbotron jumbotron-fluid jumbotron-home">
+    <div class="row justify-content-between">
+        <div class="col-md-6 pt-6 pb-6">
+            <h2 class="mb-3">Welcome to {{site.name}}</h2>
+            <p class="mb-3 lead">
+                {{site.description}}
+            </p>
+        </div>
+        <div class="col-md-6 d-none d-md-block pr-0"><img src="/img/{{site.image}}" title="{{site.name}}"></div>
+    </div>
+</div>
+
+<!-- paginate -->
+<div class="row">
+    <div class="container mt-2 mb-4">
+        {% for post in paginator.posts %} {% include main-card.html %} {% endfor %}
+    </div>
+</div>
+
+<div class="container mt-2 mb-4">
+		<!-- pagination -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="webjeda">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="/">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+</div>
+

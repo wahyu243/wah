@@ -1,0 +1,30 @@
+{% include head.html %}
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top">
+    {% include header.html %}
+	<div class="container mt-70">
+	<div id="results" class="row"></div>
+	<main class="content">
+	{{ content }}
+	</main>
+	</div>
+    {% if page.layout == 'post' %} 
+    {% include alertbar.html %}
+    {% endif %}       
+    {% include footer.html %}
+    {% if site.analytics %}
+    {% include analytics.html %}
+    {% endif %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+    <script src="{{ site.baseurl }}/js/main.js"></script>
+	<script src="{{ site.baseurl }}/js/search.js"></script>
+    <div hidden id="snipcart" data-api-key="{{site.snipcart-api}}"></div>
+	{% if page.layout == 'post' %}
+<script type='text/javascript'>var disqus_shortname="{{ site.disqus.shortname }}",disqus_config=function(){this.page.url="{{ page.url | absolute_url }}",this.page.identifier="{{ page.url | absolute_url }}"},is_disqus_loaded=!1;function loadDisqus(){if(!is_disqus_loaded){is_disqus_loaded=!0;var s=document,e=s.createElement("script");e.src="//"+disqus_shortname+".disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(s.head||s.body).appendChild(e)}}
+</script>{% endif %}
+    <script src="https://cdn.snipcart.com/themes/v3.0.0-beta.3/default/snipcart.js" defer></script> 
+	<script> $("#search-input").keyup(function() { $("main.content").hide(); if (!$('#search-input').val()) { $("main.content").show(); } });
+	$("#search-input").hover(function() { $("main.content").hide(); if (!$('#search-input').val()) { $("main.content").show(); } });
+	</script>
+    {% include svg-defs.svg %}
+</body>
+</html>

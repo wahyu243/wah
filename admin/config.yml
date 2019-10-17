@@ -1,0 +1,90 @@
+backend:
+  name: git-gateway
+  branch: master
+  
+media_folder: "img/product/"
+public_folder: "/img/product/"
+
+publish_mode: editorial_workflow
+collections:
+  - name: "Product"
+    label: "Product"
+    folder: "_posts/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - label: "Price"
+        name: "price"
+        widget: "string"
+        required: false
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "Tags/Category"
+    label: "Tags/Category"
+    folder: "_pages/category"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "nosidebar"
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        required: false
+      - {label: "Date", name: "date", widget: "datetime"}
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        required: false
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  
+- name: 'pages'
+  label: 'Pages'
+  folder: "_pages/"
+  editor:
+    preview: false
+  files:
+    - label: 'About Page'
+      name: 'about'
+      file: 'about.md'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+        - { label: 'Layout', name: 'title', widget: 'hidden', default: 'pages' }
+        - { label: 'Body', name: 'body', widget: 'markdown' }
+        
+  - name: "config"
+    label: "Config"
+    editor:
+    preview: false
+    files:
+      - label: "Navigation"
+        name: "navigation"
+        file: "_data/menu.yml"
+        fields:
+        - label: "Navigation Items"
+          name: "menu"
+          widget: "list"
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Url, name: url, widget: string}
+            
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "_data/testimonials.yml"
+        fields:
+        - label: "Testimonials"
+          name: "testimonials"
+          widget: "list"
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Description, name: description, widget: string}
+            - {label: Title, name: title, widget: string}

@@ -1,0 +1,48 @@
+{% assign author = site.authors[page.author] %}
+<header>
+    <div class="jumbotron jumbotron-fluid bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row {% if page.image %} justify-content-between {% else %} justify-content-center {% endif %}">
+                <div class="col-md-9 col-md-7 col-sm-7 col-sm-5 align-self-center">
+
+                    <h1 class="display-4 mb-2 article-headline">{{ page.title }}</h1>
+                    <div class="d-flex align-items-center no-print mb-4">
+
+                        <small class="text-muted d-block mt-1">
+		       <svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg>&nbsp;{{page.author}}&nbsp;&nbsp;
+		       <svg class="icon icon-calendar"><use xlink:href="#icon-calendar"></use></svg>&nbsp;{{ page.date | date_to_string }}&nbsp;&nbsp;
+		       <span class="read-time" title="Estimated read time"><svg class="icon icon-clock-o"><use xlink:href="#icon-clock-o"></use></svg>&nbsp;
+          <span itemprop="timeRequired">
+          {% assign words = content | number_of_words %}
+          {% if words < 360 %}
+            1 min read
+          {% else %}
+            {{ words | divided_by:180 }} Mins read
+          {% endif %}
+          </span>
+        </span></small>
+                        
+
+                    </div>
+                    <div class="meta clearfix mb-4">
+                        {% include tags.html %}
+					<span class="right">	
+                        {% if page.price %}
+                        <a class="buy-button snipcart-add-item btn btn-sm btn-warning pointer" data-item-id="{{ page.slug }}" data-item-name="{{ page.title }}" data-item-price="{{ page.price }}" data-item-image="{{ site.url }}/img/product/{{ page.image }}" data-item-url="{{ site.url }}{{ page.url }}" data-item-description="{% if page.description %}{{ page.description }}{% else %}{{ post.excerpt | strip_html | strip_newlines | truncate: 50  }}{% endif %}">
+ Add to cart (${{ page.price }})
+</a> {% endif %}
+
+                    </span>
+					</div>
+                    <div class="decription">{% if page.description %} {{ page.description | strip_html | strip_newlines | truncate: 150 }} {% else %}{{ page.excerpt | strip_html | strip_newlines | truncate: 150 }}{% endif %}</div>
+</div>
+                    {% if page.image %}
+                    <div class="col-md-3 align-self-center"><a href="/img/product/{{ page.image | replace: 'img/',''}}" class="expandable-box image-link">
+                        <img class="rounded lazyload" src="/img/product/{{ page.image | replace: 'img/',''}}" alt="{{ page.title }}" />
+						</a>
+                    </div>
+                    {% endif %}
+                
+            </div>
+        </div>
+</header>

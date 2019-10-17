@@ -1,0 +1,49 @@
+<div class="recent text-center no-print">
+<h4 class="text">Similiar Themes</h4>
+ 
+<div class="rect">
+
+  {% assign maxRelated = 6 %}
+
+  {% assign minCommonTags =  1 %}
+
+  {% assign maxRelatedCounter = 0 %}
+
+ 
+  {% for post in site.posts %}
+
+   
+    {% assign sameTagCount = 0 %}
+    {% assign commonTags = '' %}
+
+     {% for tag in post.tags %}
+      {% if post.url != page.url %}
+        {% if page.tags contains tag %}
+          {% assign sameTagCount = sameTagCount | plus: 1 %}
+          {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+          {% assign commonTags = commonTags | append: tagmarkup %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if sameTagCount >= minCommonTags %}
+            <div class="row">
+<div class="col-md-3 mb-4">
+<div class="item-card">
+<a class="item-card-img shadow d-block" href="{{site.url}}/{{ post.url }}" title="{{ post.title }}" rel="nofollow">
+<img class="img-fluid" src="/img/product/{{ post.image }}" alt="{{ post.title }}">
+</a>
+</div>
+</div>
+</div>
+
+
+      {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+      {% if maxRelatedCounter >= maxRelated %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+</div>

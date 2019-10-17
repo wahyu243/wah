@@ -1,0 +1,43 @@
+<!-- Start Testimonials -->
+<div id="testimonials" class="testimonials parallax" style="background-image: url('{{ site.baseurl }}/img/{{ site.testimonials.testimonials_img }}');">
+    <div class="overlay-container">
+        <div class="overlay"></div>
+        <div class="container-fluid">
+            <div id="testimonial-carousel">
+                {% for testimonial in site.data.testimonials %}
+                <div class="testimonial-item">
+                    <svg class="icon icon-quote-left">
+                        <use xlink:href="#icon-quote-left"></use>
+                    </svg>
+                    <blockquote>
+                        <p>{{ testimonial.description }}</p>
+                        <footer>
+                            {{ testimonial.name }}
+                            <small>{{ testimonial.title }}</small>
+                        </footer>
+                    </blockquote>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Testimonials -->
+<!-- Start Footer -->
+<footer class="main-footer no-print">
+
+    <div class="container-fluid">
+        <ul class="social">
+            {% if site.facebook %}<li><a href="{{ site.facebook }}"><svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a></li>{% endif %}
+            {% if site.twitter %}<li><a href="{{ site.twitter }}"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a></li>{% endif %}
+            {% if site.instagram %}<li><a href="{{ site.instagram }}"><svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg></a></li>{% endif %}
+            {% if site.youtube %}<li><a href="{{ site.youtube }}"><svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg></a></li>{% endif %}
+            {% if site.skype %}<li><a href="{{ site.skype }}"><svg class="icon icon-skype"><use xlink:href="#icon-skype"></use></svg></a></li>{% endif %}
+            {% if site.feed %}<li><a href="#"><svg class="icon icon-feed"><use xlink:href="#icon-feed"></use></svg></a></li>{% endif %}
+        </ul>
+
+        <small>{% if site.copyright %} {{ site.copyright }} {% endif %}</small>
+
+    </div>
+</footer>
+<!-- End Footer -->

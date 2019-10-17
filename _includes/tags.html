@@ -1,0 +1,4 @@
+<div class="btn-group no-print">
+    {% for tag in page.tags %}
+    <a class="btn btn-sm btn-success" href="{{site.url}}/{{tag|slugize}}"><span itemprop="keywords">{{tag | capitalize | replace:'-',' '}}</span></a>{% unless forloop.last %}&nbsp;{% endunless %} {% endfor %}&nbsp;
+</div>

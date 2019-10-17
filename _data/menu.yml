@@ -1,0 +1,14 @@
+- name: Home 
+  url: /
+
+- name: Electronic
+  url: /electronic
+
+- name: Accecories
+  url: /accecories
+
+- name: Fashion
+  url: /fashion
+
+- name: Food & Drink 
+  url: /food-drink

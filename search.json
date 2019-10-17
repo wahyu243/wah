@@ -1,0 +1,17 @@
+---
+---
+[
+  {% for post in site.posts %}
+    {
+
+      "title"   : "{{ post.title | escape }}",
+      "url"     : "{{ site.url }}{{ post.url }}",
+	  "price" 	: "{{ post.price }}",
+	  "image"	: "{{ post.image }}",
+	  "description"	: "{% if post.description %} {{ post.description | strip_html | strip_newlines | truncate: 150 }} {% else %}{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}{% endif %}",
+	  "tags"    : "{{ post.tags | join: ', ' }}",
+      "date"    : "{{ post.date }}"
+
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

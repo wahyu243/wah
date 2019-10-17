@@ -1,0 +1,28 @@
+<!-- Start Header -->
+<nav class="navbar navbar-default navbar-fixed-top no-print">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand scroll" href="{{ site.url}}"><img src="{{ site.url}}/{{ site.logo_url }}" alt="{{ site.title }}"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+       
+        <div class="collapse navbar-collapse scrollspy" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">{% for menu in site.data.menu %}
+                <li><a class="scroll" href="{{site.baseurl}}{{menu.url}}" title="{{ menu.name }}">{{ menu.name }}</a></li>{% endfor %}
+				<li><a class="scroll header__checkout snipcart-checkout pointer"><svg class="icon icon-bag"><use xlink:href="#icon-bag"></use></svg>&nbsp;<span class="snipcart-total-price"></span></a></li>
+            <li>{% include search.html %}</li>
+			</ul>
+			
+        </div>     
+       
+    </div>
+</nav>
+<!-- End Header -->
