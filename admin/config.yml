@@ -48,21 +48,21 @@ collections:
         name: 'about'
         file: 'about.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+          - { label: 'Title', name: 'title', widget: 'string'}
           - { label: 'Layout', name: 'title', widget: 'hidden', default: 'page' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Faqs'
         name: 'faqs'
         file: 'faqs.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+          - { label: 'Title', name: 'title', widget: 'string'}
           - { label: 'Layout', name: 'title', widget: 'hidden', default: 'page' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Contact'
         name: 'contact'
         file: 'contact.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+          - { label: 'Title', name: 'title', widget: 'string'}
           - { label: 'Layout', name: 'title', widget: 'hidden', default: 'page' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
