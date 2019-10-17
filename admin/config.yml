@@ -29,10 +29,26 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "nosidebar"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
+      
+- name: "config"
+  label: "Config"
+  editor:
+    preview: false
+  files:
+    - label: "Navigation"
+      name: "navigation"
+      file: "_data/navigation.yml"
+      fields:
+        - label: "Navigation Items"
+          name: "items"
+          widget: "list"
+          fields:
+            - {label: Name, name: name, widget: string}
+            - {label: Link, name: link, widget: string}
