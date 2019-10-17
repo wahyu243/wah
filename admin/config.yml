@@ -42,29 +42,10 @@ collections:
     folder: "_pages/"
     create: true
     slug: "{{slug}}"
-    files:
-      - label: 'About Page'
-        name: 'about'
-        file: 'about.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string'}
-          - { label: 'Layout', name: 'title', widget: 'hidden', default: 'page' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Faqs'
-        name: 'faqs'
-        file: 'faqs.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string'}
-          - { label: 'Layout', name: 'title', widget: 'hidden', default: 'page' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Contact'
-        name: 'contact'
-        file: 'contact.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string'}
-          - { label: 'Layout', name: 'title', widget: 'hidden', default: 'page' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "nosidebar"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
 
   - name: 'settings'
     label: 'Settings'
