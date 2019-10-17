@@ -2,15 +2,6 @@
 // Navbars
 // --------------------------------------------------
 
-//
-// Navbars
-// --------------------------------------------------
-
-
-// Wrapper and base class
-//
-// Provide a static navbar from which we expand to create full-width, fixed, and
-// other navbar variations.
 
 .navbar {
   position: relative;
@@ -227,7 +218,10 @@
   }
 }
 
-
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    background: #3dadb2;
+}
 
 .navbar {
     position: relative;
@@ -292,15 +286,6 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center
-}
-
-.navbar-toggle {
-    padding: .25rem .75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: .25rem
 }
 
 .navbar-toggle:focus,
