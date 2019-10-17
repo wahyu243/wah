@@ -15,7 +15,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
        
         <div class="collapse navbar-collapse scrollspy" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">{% for menu in site.data.menu %}
+            <ul class="nav navbar-nav navbar-right">{% for menu in site.data.menu.items %}
                 <li><a class="scroll" href="{{site.baseurl}}{{menu.url}}" title="{{ menu.name }}">{{ menu.name }}</a></li>{% endfor %}
 				<li><a class="scroll header__checkout snipcart-checkout pointer"><svg class="icon icon-bag"><use xlink:href="#icon-bag"></use></svg>&nbsp;<span class="snipcart-total-price"></span></a></li>
             <li>{% include search.html %}</li>
