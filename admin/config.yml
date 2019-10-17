@@ -22,16 +22,7 @@ collections:
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "Tags/Category"
-    label: "Tags/Category"
-    folder: "_pages/category"
-    create: true
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}    
+      
   - name: 'pages'
     label: 'Pages'
     folder: "_pages/"
@@ -44,7 +35,8 @@ collections:
        fields:
         - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
         - { label: 'Layout', name: 'title', widget: 'hidden', default: 'pages' }
-        - { label: 'Body', name: 'body', widget: 'markdown' }        
+        - { label: 'Body', name: 'body', widget: 'markdown' } 
+        
   - name: "config"
     label: "Config"
     editor:
