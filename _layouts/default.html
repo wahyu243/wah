@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
     <script src="{{ site.baseurl }}/js/main.js"></script>
 	
-    <div hidden id="snipcart" data-api-key="{{site.snipcart-api}}"></div>
+    <div hidden id="snipcart" data-api-key="{{site.snipcart-key}}"></div>
 	{% if page.layout == 'post' %}
 <script type='text/javascript'>var disqus_shortname="{{ site.disqus.shortname }}",disqus_config=function(){this.page.url="{{ page.url | absolute_url }}",this.page.identifier="{{ page.url | absolute_url }}"},is_disqus_loaded=!1;function loadDisqus(){if(!is_disqus_loaded){is_disqus_loaded=!0;var s=document,e=s.createElement("script");e.src="//"+disqus_shortname+".disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(s.head||s.body).appendChild(e)}}
 </script>{% endif %}
