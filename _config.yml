@@ -61,7 +61,7 @@ youtube: http://youtube.com
 copyright: © 2019 Jekyll Ecommerce - All rights reserved
 
 # 3dPart
-snipcart-api: ZmFkZTg2YjgtYjI5Mi00MGQ1LThmOGQtMjRlNzFkNzJiMmFlNjM3MDY3MTkyNzYyMTEwNjEw
+snipcart-key: ZmFkZTg2YjgtYjI5Mi00MGQ1LThmOGQtMjRlNzFkNzJiMmFlNjM3MDY3MTkyNzYyMTEwNjEw #your snipchart key
 
 analytics: 
 google_verification: 
