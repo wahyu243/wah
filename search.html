@@ -1,23 +1,15 @@
 ---
-layout: default
+layout: search
 title: Search
 permalink: /search
 ---
 
 <!-- Html Elements for Search -->
-<div id="search-container">
-<input type="text" id="search-input" placeholder="search...">
-<ul id="results-container"></ul>
-</div>
+<form class="form-inline ui icon input" onsubmit="return false;">
+<input id="search-input" class="prompt form-control head_search typeahead" type="text" placeholder="Search a item......" autocomplete="off">
+</form>
+
+<div id="results" class="row"></div>
 
 <!-- Script pointing to search-script.js -->
-<script src="/path/to/search-script.js" type="text/javascript"></script>
-
-<!-- Configuration -->
-<script>
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '/search.json'
-})
-</script>
+<script src="{{ site.baseurl }}/js/search.js"></script>

@@ -13,3 +13,6 @@ items:
 
 - name: Food & Drink 
   url: /food
+
+- name: Search
+  url: /search
